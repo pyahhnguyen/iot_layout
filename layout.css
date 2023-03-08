@@ -1,0 +1,74 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    padding: 20px;
+}
+
+.lt{
+    background-color: gold;
+    border: 1px  solid grey;
+    min-height: 50px;
+}
+.container{
+    display: grid;
+    height: 80vh;
+
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 50px 1fr 1fr 30px;
+    /* grid-auto-rows: minmax(60px, auto); */
+    grid-template-areas: 
+    "hh hh hh"
+    "mn ss ss"
+    "mn dv dv"
+    "ff ff ff";
+
+    column-gap: 10px;
+    row-gap: 10px;
+}
+.footer{
+    /* grid-column: 2/4;
+    grid-row: 2/4;
+    grid-area: aa; */
+    grid-area: ff;
+}
+.menu_room{
+    /* grid-row: 2/5; */
+    grid-area: mn;
+}
+.header{
+    /* grid-row: 2/5; */
+    grid-area: hh;
+}
+.sensor{
+    /* grid-row: 2/5; */
+    grid-area: ss;
+}
+.device{
+    /* grid-row: 2/5; */
+    grid-area: dv;
+   display: flex;
+    flex-wrap: wrap;
+    width: calc(33.33% - 10px);
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .device:nth-child(3n) {
+    margin-right: 0;
+  }
+  
+  @media (max-width: 768px) {
+    .device {
+      width: calc(50% - 10px);
+    }
+  
+    .device:nth-child(3n) {
+      margin-right: 10px;
+    }
+  
+    .device:nth-child(2n) {
+      margin-right: 0;
+    }
+  }

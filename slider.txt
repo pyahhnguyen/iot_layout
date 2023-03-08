@@ -1,0 +1,20 @@
+ <div class="flex-item-3-divine-1">
+          <div id="table-tempshow">
+         
+        </div>
+          <table>
+              <tr>
+              <td>
+                <div>
+                 <input type="range" min="0" max="100" value="50">
+                 <!-- input[type="range"] {
+                  width: 100%;
+                  align-items: center;
+                } -->
+              </div>
+              </td>
+             </tr>                               
+          </table>
+        </div>
+       </div>
+        
